@@ -3,8 +3,14 @@
  */
 package com.bridgeabz.mathoperationsapp;
 
+@FunctionalInterface
+interface IMathFunction{
+	int calculate(int a, int b);
+}
+
 public class MathOperationsApp {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+    
+	public static void main(String args[]) {
+		
+	}
 }
