@@ -12,5 +12,12 @@ public class MathOperationsApp {
     
 	public static void main(String args[]) {
 		
+		IMathFunction add=(int a, int b)->a+b;
+		IMathFunction subtract=(int a, int b)-> a-b;
+		IMathFunction divide=(int a, int b)->{
+			if(b == 0) return 0;
+			return a/b;
+		};
+		
 	}
 }
