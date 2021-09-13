@@ -6,6 +6,10 @@ package com.bridgeabz.mathoperationsapp;
 @FunctionalInterface
 interface IMathFunction{
 	int calculate(int a, int b);
+	static void PrintResult(int a, int b, String functionName, IMathFunction function ) {
+		System.out.println("Result of "+functionName+" is "+ function.calculate(a, b));
+		
+	}
 }
 
 public class MathOperationsApp {
@@ -19,9 +23,9 @@ public class MathOperationsApp {
 			return a/b;
 		};
 		
-		System.out.println("Addition: "+ add.calculate(6,3));
-		System.out.println("Subtraction: "+ subtract.calculate(6,3));
-		System.out.println("Division: "+ divide.calculate(6,3));
+		IMathFunction.PrintResult(6, 3,"Addition", add);
+		IMathFunction.PrintResult(6, 3,"Subtraction", subtract);
+		IMathFunction.PrintResult(6, 3,"Division",divide);
 		
 	}
 }
