@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 
 
@@ -45,5 +46,8 @@ public class NumberPlayList {
 		
 		Function<Integer, Double> toDoubleFunction = Integer::doubleValue;
 		myNumberList.forEach(n -> System.out.println("foreach lambda to double value " + toDoubleFunction.apply(n)));
+		
+		Predicate<Integer> isEvenFunction = n -> n > 0 && n % 2 == 0;
+		myNumberList.forEach(n -> System.out.println("value of "+ n +" check for even :"+ isEvenFunction.test(n)));
 	}
 }
