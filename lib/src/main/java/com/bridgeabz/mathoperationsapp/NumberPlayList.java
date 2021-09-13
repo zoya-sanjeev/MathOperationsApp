@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+
+
 public class NumberPlayList {
 	
 	public static void main(String args[]) {
@@ -15,10 +17,19 @@ public class NumberPlayList {
 		//iterate using proper class
 		class MyConsumer implements Consumer<Integer>{
 			public void accept(Integer t) {
-				System.out.println("Value: "+t);
+				System.out.println("Value using Consumer implementation: "+t);
 			}
 		}
 		MyConsumer action = new MyConsumer();
 		myNumberList.forEach(action);
+		
+		// iterate using anonymous class
+		
+		myNumberList.forEach(new Consumer<Integer>() {
+			public void accept(Integer t) {
+				System.out.println("foreach anonymous class value: "+ t);
+			}
+			
+		});
 	}
 }
