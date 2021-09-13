@@ -24,12 +24,22 @@ public class NumberPlayList {
 		myNumberList.forEach(action);
 		
 		// iterate using anonymous class
-		
 		myNumberList.forEach(new Consumer<Integer>() {
 			public void accept(Integer t) {
 				System.out.println("foreach anonymous class value: "+ t);
 			}
 			
+		});
+		
+		//Explicit lambda function
+		Consumer<Integer> myListAction = n ->{
+			System.out.println("foreach lambda implementation value: "+ n);
+		};
+		myNumberList.forEach(myListAction);
+		
+		//Implicit lambda function
+		myNumberList.forEach(n -> { 
+			System.out.println("foreach lambda implementation value: "+ n);
 		});
 	}
 }
