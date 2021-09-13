@@ -25,7 +25,7 @@ public class MathOperationsApp {
 		
 		IMathFunction.PrintResult(6, 3,"Addition", add);
 		IMathFunction.PrintResult(6, 3,"Subtraction", subtract);
-		IMathFunction.PrintResult(6, 3,"Division",divide	);
+		IMathFunction.PrintResult(6, 3,"Division",divide);
 		
 	}
 }
