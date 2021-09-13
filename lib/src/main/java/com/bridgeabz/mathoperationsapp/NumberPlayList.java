@@ -3,6 +3,7 @@ package com.bridgeabz.mathoperationsapp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 
 
@@ -41,5 +42,8 @@ public class NumberPlayList {
 		myNumberList.forEach(n -> { 
 			System.out.println("foreach lambda implementation value: "+ n);
 		});
+		
+		Function<Integer, Double> toDoubleFunction = Integer::doubleValue;
+		myNumberList.forEach(n -> System.out.println("foreach lambda to double value " + toDoubleFunction.apply(n)));
 	}
 }
