@@ -19,5 +19,9 @@ public class MathOperationsApp {
 			return a/b;
 		};
 		
+		System.out.println("Addition: "+ add.calculate(6,3));
+		System.out.println("Subtraction: "+ subtract.calculate(6,3));
+		System.out.println("Division: "+ divide.calculate(6,3));
+		
 	}
 }
