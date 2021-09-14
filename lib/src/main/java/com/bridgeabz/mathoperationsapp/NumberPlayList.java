@@ -74,6 +74,16 @@ public class NumberPlayList {
 							.orElse(null);
 		
 		System.out.println("First even number: "+firstEven);
+		
+		//min and max
+		
+		Integer min = myNumberList.stream()
+					  .filter(isEvenFunction)
+					  .min((n1,n2) -> n1-n2)
+					  .orElse(null);
+		System.out.println("Min even: "+min);
+		
+		
 	
 	}
 }
