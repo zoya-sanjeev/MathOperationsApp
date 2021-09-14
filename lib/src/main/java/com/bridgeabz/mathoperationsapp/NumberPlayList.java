@@ -60,6 +60,7 @@ public class NumberPlayList {
 		//transform to a double list and store result
 		
 		List<Double> doubleList=myNumberList.stream()
+								.filter(isEvenFunction)
 								.map(toDoubleFunction)
 								.collect(Collectors.toList());
 		System.out.println(doubleList);
