@@ -11,7 +11,6 @@ import static org.junit.Assert.*;
 
 public class MathOperationAppTest {
     @Test public void testSomeLibraryMethod() {
-        MathOperationsApp classUnderTest = new MathOperationsApp();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        
     }
 }

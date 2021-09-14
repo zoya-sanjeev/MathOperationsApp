@@ -49,5 +49,12 @@ public class NumberPlayList {
 		
 		Predicate<Integer> isEvenFunction = n -> n > 0 && n % 2 == 0;
 		myNumberList.forEach(n -> System.out.println("value of "+ n +" check for even :"+ isEvenFunction.test(n)));
+		
+		//creating a stream
+		
+		myNumberList.stream().forEach(n -> {
+			System.out.println("MyNumberList forEach value"+ n);
+		});
+	
 	}
 }
