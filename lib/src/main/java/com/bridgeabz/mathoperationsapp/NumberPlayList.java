@@ -1,6 +1,7 @@
 package com.bridgeabz.mathoperationsapp;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
@@ -107,6 +108,13 @@ public class NumberPlayList {
 		System.out.println("All even: "+allEven);
 		System.out.println("At least one even :"+ oneEven);
 		
+		//sort 
+		List<Integer> unSortedList=Arrays.asList(new Integer[]{4,2,3,1,6});
+		List<Integer> sortedList=unSortedList.stream()
+								.sorted((n1,n2)-> n1.compareTo(n2))
+								.collect(Collectors.toList());
+		
+		System.out.println("Sorted List: "+ sortedList);
 		
 	
 	}
