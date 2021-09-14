@@ -1,6 +1,7 @@
 package com.bridgeabz.mathoperationsapp;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -82,6 +83,12 @@ public class NumberPlayList {
 					  .min((n1,n2) -> n1-n2)
 					  .orElse(null);
 		System.out.println("Min even: "+min);
+		
+		Integer max=myNumberList.stream()
+					.filter(isEvenFunction)
+					.max(Comparator.comparing(Integer::intValue))
+					.orElse(null);
+		System.out.println("Max even "+ max);
 		
 		
 	
