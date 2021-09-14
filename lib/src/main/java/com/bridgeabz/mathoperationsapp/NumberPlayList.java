@@ -64,6 +64,16 @@ public class NumberPlayList {
 								.map(toDoubleFunction)
 								.collect(Collectors.toList());
 		System.out.println(doubleList);
+		
+		//first even number
+		
+		Integer firstEven = myNumberList.stream()
+							.filter(isEvenFunction)
+							.peek(n -> System.out.println("Peek: "+ n))
+							.findFirst()
+							.orElse(null);
+		
+		System.out.println("First even number: "+firstEven);
 	
 	}
 }
