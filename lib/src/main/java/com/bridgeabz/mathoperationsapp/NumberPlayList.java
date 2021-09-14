@@ -90,6 +90,15 @@ public class NumberPlayList {
 					.orElse(null);
 		System.out.println("Max even "+ max);
 		
+		//sum
+		
+		Integer sum=myNumberList.stream()
+					.reduce(0,Integer::sum);
+		System.out.println("Sum :"+ sum);
+		long count=myNumberList.stream().count();
+		
+		System.out.println("Avg: "+sum/count);
+		
 		
 	
 	}
