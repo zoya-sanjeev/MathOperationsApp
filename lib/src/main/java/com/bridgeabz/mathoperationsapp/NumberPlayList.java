@@ -99,6 +99,14 @@ public class NumberPlayList {
 		
 		System.out.println("Avg: "+sum/count);
 		
+		//all even or any even
+		
+		boolean allEven=myNumberList.stream().allMatch(isEvenFunction);
+		boolean oneEven=myNumberList.stream().anyMatch(isEvenFunction);
+		
+		System.out.println("All even: "+allEven);
+		System.out.println("At least one even :"+ oneEven);
+		
 		
 	
 	}
